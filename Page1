@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=900, initial-scale=1" />
+<title>Page1</title>
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.main-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0;
+  background: linear-gradient(90deg, #782566 55%, #2D779B 45%);
+}
+.page-content {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  align-items: stretch;
+}
+.vertical-nav {
+  position: relative;
+  width: 120px;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  z-index: 2;
+  height: 100%;
+}
+.circle {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 36px;
+  position: relative;
+  opacity: 1;
+}
+.circle:nth-child(1) { background: #B53211;}
+.circle:nth-child(2) { background: #DC176C;}
+.circle:nth-child(3) { background: #C26700;}
+.circle:nth-child(4) { background: #B57A21;}
+.circle:nth-child(5) { background: #35582E;}
+.circle:nth-child(6) { background: #1D4330;}
+.circle:nth-child(7) { background: #392B50;}
+.circle:nth-child(8) { background: #392B50;}
+.circle:nth-child(9) { background: #5C2A16;}
+.circle:nth-child(10) { background: #5C164E}
+.circle:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 39px;
+  background: rgba(255,255,255,0.28);
+  z-index: 0;
+}
+
+.zine-main {
+  flex: 1;
+  padding-top: 70px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 3;
+}
+
+.text-blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.left-text, .right-text {
+  width: 44%;
+  max-width: 680px;
+  color: #fff;
+  font-size: 1.7vw;
+  line-height: 2.1vw;
+  font-family: 'GT Alpina Trial', serif;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0,0,0,0.18);
+  margin: 0 30px;
+}
+.right-text {
+  text-align: right;
+}
+.image-block {
+  position: absolute;
+  right: 80%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 44vw;
+  max-width: 860px;
+  min-width: 260px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width:1100px) {
+  .text-blocks { flex-direction: column; }
+  .left-text, .right-text { width: 92%; font-size: 22px; line-height: 28px; text-align: center; }
+  .image-block { position: static; width: 80vw; margin: 0 auto;}
+  .vertical-nav { width: 70px; min-width: 40px; }
+}
+@media (max-width:900px) {
+  .page-content { flex-direction: column;}
+  .vertical-nav { flex-direction: row; padding-top: 35px; width: 100vw; }
+  .circle { margin-bottom: 0; margin-right: 15px;}
+  .circle:not(:last-child)::after { width: 39px; height: 5px; left: 100%; top: 50%; transform: translateY(-50%);}
+  .zine-main { height: auto; padding-top: 30px;}
+}
+</style>
+</head>
+<body>
+<div class="main-bg"></div>
+<div class="page-content">
+  <div class="vertical-nav">
+  <a href="index.html"><div class="circle">1</div></a>
+  <a href="Page2.html"><div class="circle">2</div></a>
+  <a href="Page3.html"><div class="circle">3</div></a>
+  <a href="Page4.html"><div class="circle">4</div></a>
+  <a href="Page5.html"><div class="circle">5</div></a>
+  <a href="Page6.html"><div class="circle">6</div></a>
+  <a href="Page7.html"><div class="circle">7</div></a>
+  <a href="Page8.html"><div class="circle">8</div></a>
+  <a href="Page9.html"><div class="circle">9</div></a>
+  <a href="Page10.html"><div class="circle">10</div></a>
+</div>
+  
+  <div class="zine-main">
+    <div class="text-blocks">
+      <div class="left-text">
+        I wanted to show the culture I have seen and present it through my eyes...
+
+Whether it is the means of transport, fashion, music or poetry, everything is full of expressions which I want to show in this zine...
+
+
+      </div>
+      <div class="right-text">
+        In Pakistan, art isn't hung on walls—it is worn, driven, and sung with a passion that saturates the very air. It’s a culture where creativity is a public spectacle, a personal identity, and a spiritual release, all at once.
+
+Here, art bursts out of closets, rides in rickshaws, and hums through city streets—always bold, always in motion.
+      </div>
+    </div>
+    <div class="image-block">
+      <img src="./images/3ladies-removebg-preview.png" alt="Three Ladies">
+    </div>
+  </div>
+</div>
+</body>
+</html>
